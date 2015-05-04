@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Whitewater Adventures</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/angular-gridster.min.css" rel="stylesheet" />
+    <link href="app/app.css" rel="stylesheet" />
+    <link href="ext-modules/psFramework/psFramework.css" rel="stylesheet" />
+    <link href="ext-modules/psMenu/psMenu.css" rel="stylesheet" />
+    <link href="ext-modules/psDashboard/psDashboard.css" rel="stylesheet" />
+
+    <!-- widget css -->
+    <link href="app/widgets/wwaTemperature/wwaTemperature.css" rel="stylesheet" />
+    <link href="app/widgets/wwaInventory/wwaInventory.css" rel="stylesheet" />
+    <link href="app/widgets/wwaEmployee/wwaEmployee.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-gridster.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/ngStorage.min.js"></script>
+
+    <script src="ext-modules/psMenu/psMenuModule.js"></script>
+    <script src="ext-modules/psMenu/psMenuController.js"></script>
+    <script src="ext-modules/psMenu/psMenuDirective.js"></script>
+    <script src="ext-modules/psMenu/psMenuItemDirective.js"></script>
+    <script src="ext-modules/psMenu/psMenuGroupDirective.js"></script>
+
+    <script src="ext-modules/psDashboard/psDashboardModule.js"></script>
+    <script src="ext-modules/psDashboard/psDashboardDirective.js"></script>
+    <script src="ext-modules/psDashboard/psWidgetBodyDirective.js"></script>
+
+    <script src="ext-modules/psFramework/psFrameworkModule.js"></script>
+    <script src="ext-modules/psFramework/psFrameworkController.js"></script>
+    <script src="ext-modules/psFramework/psFrameworkDirective.js"></script>
+    <script src="ext-modules/psFramework/psUserProfile/psUserProfileSmallDirective.js"></script>
+    <script src="ext-modules/psFramework/psUserProfile/psUserProfileDirective.js"></script>
+
+    <script src="app/appModule.js"></script>
+    <script src="app/appConfig.js"></script>
+    <script src="app/appRouteConfig.js"></script>
+    <script src="app/appController.js"></script>
+    <script src="app/services/dataService.js"></script>
+
+    <script src="app/directives/wwaDashboardDirective.js"></script>
+    <script src="app/directives/wwaGuidesDirective.js"></script>
+    <script src="app/directives/wwaLocationsDirective.js"></script>
+
+    <!-- widget JavaScript files -->
+    <script src="app/widgets/wwaTemperature/wwaTemperatureDirective.js"></script>
+    <script src="app/widgets/wwaInventory/wwaInventoryDirective.js"></script>
+    <script src="app/widgets/wwaEmployee/wwaEmployeeDirective.js"></script>
+
+    <!-- setting dialogs -->
+    <script src="app/dialogs/wwaSelectEmployeeController.js"></script>
+    <script src="app/dialogs/wwaSelectLocationController.js"></script>
+
+</head>
+<body class="container-fluid" ng-controller="appController">
+
+    <div ng-switch="state">
+        <div ng-switch-when="x unauthorized" class="sign-in-form">
+            <h2>Whitewater Adventures Admin App</h2>
+            <h4>Sign In</h4>
+            <form>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="text" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control"/>
+                </div>
+            </form>
+            <button class="btn btn-default" ng-click="signIn()">Sign In</button>
+        </div>
+        <div ng-switch-default>
+            <ps-framework title="Whitewater Adventures"
+                          subtitle="Administrative Application"
+                          icon-file="images/kayak-icon-flat.png">
+                <ps-menu>
+                    <ps-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></ps-menu-item>
+                    <ps-menu-item label="Locations" icon="fa-location-arrow" route="locations"></ps-menu-item>
+                    <ps-menu-item label="Raft Guides" icon="fa-user" route="guides"></ps-menu-item>
+                    <ps-menu-group label="Equipment" icon="fa-gears">
+                        <ps-menu-item label="Rafts" icon="fa-unlink" route="rafts"></ps-menu-item>
+                        <ps-menu-item label="Paddles" icon="fa-magic" route="paddles"></ps-menu-item>
+                        <ps-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></ps-menu-item>
+                    </ps-menu-group>
+                </ps-menu>
+            </ps-framework>
+        </div>
+    </div>
+
+
+</body>
+</html>

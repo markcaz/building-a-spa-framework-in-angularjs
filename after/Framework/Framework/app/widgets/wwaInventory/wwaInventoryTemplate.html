@@ -1,0 +1,37 @@
+﻿
+<div class="wwa-inventory-widget">
+
+    <div class="wwa-inventory-heading">
+        <img class="wwa-inventory-icon" ng-src="images/inventory-icon.png" alt="inventory" />
+        <span class="www-inventory-title">Inventory</span>
+    </div>
+
+    <div class="wwa-inventory-body" ng-style="selectedLocation != null && {'background-image': 'url(/images/' + selectedLocation.image + ')'}">
+        <div class="wwa-inventory-area">
+
+            <div class="wwa-inventory-river-name">
+                {{ selectedLocation.name }}
+            </div>
+
+            <div class="wwa-inventory-item">
+                <img src="/images/guide-icon.png" />
+                <span class="wwa-inventory-amount">{{selectedLocation.guides}}</span>
+                <span class="wwa-inventory-caption">GUIDES</span>
+            </div>
+            <div class="wwa-inventory-item">
+                <img src="/images/vest-icon.png" />
+                <span class="wwa-inventory-amount">{{selectedLocation.vests}}</span>
+                <span class="wwa-inventory-caption">VESTS</span>
+            </div>
+            <div class="wwa-inventory-item">
+                <img src="/images/raft-icon.png" />
+                <span class="wwa-inventory-amount">{{selectedLocation.rafts}}</span>
+                <span class="wwa-inventory-caption">RAFTS</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

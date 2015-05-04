@@ -1,0 +1,14 @@
+﻿
+<div class="modal-header">
+    <h3 class="modal-title">Select Employee</h3>
+</div>
+<div class="modal-body">
+    <h3>Name</h3>
+    <select ng-show="isLoaded" 
+            ng-model="selectedEmployee" 
+            ng-options="employee.name for employee in employees"></select>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="saveSettings()">Ok</button>
+    <button type="button" class="btn btn-default" ng-click="$dismiss()">Cancel</button>
+</div>

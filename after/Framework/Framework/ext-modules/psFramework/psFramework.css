@@ -1,0 +1,137 @@
+﻿
+.ps-title-bar {
+    background-color: white;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
+}
+
+.ps-logo-area {
+    /*text-align: center;*/
+}
+
+.ps-title-area {
+    display: inline-block;
+}
+
+
+
+.ps-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    vertical-align: top;
+    border: 1px solid #999;
+}
+
+.ps-logo-title {
+    color: #111;
+    margin-top: 6px;
+    font-size: 22px;
+}
+
+.ps-logo-subtitle {
+    font-size: 13px;
+    margin-top: -13px;
+}
+
+@media screen and (max-width: 430px) {
+    .ps-icon {
+        display: none;
+    }
+    .ps-logo-title {
+        font-size: 18px;
+    }
+}
+
+.ps-right-side-controls {
+    line-height: 60px;
+}
+
+.ps-right-side-controls > div {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .ps-right-side-controls > div {
+        text-align: right;       
+    }
+    .ps-logo-area {
+        text-align: left;
+    }
+}
+
+.ps-collapsed-menu {
+    display: inline-block;
+    height: 100%;
+}
+
+.ps-nav-button {
+    height: 40px;
+    width: 60px;
+    margin-top: 10px;
+    border: 1px solid #888;
+    padding: 0;
+    font-size: 26px;
+    color: #777;
+}
+
+.ps-view {
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #ccc;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.ps-view-full-width {
+    margin-left: 0;
+}
+
+
+.ps-user-profile {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    min-height: 120px;
+    padding-top: 10px;
+}
+
+.ps-user-profile > div {
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 5px;
+}
+
+.ps-user-profile > div > p {
+    margin-bottom: 2px;
+}
+
+.ps-user-profile > div > button {
+    margin-top: 8px;
+}
+
+.ps-user-profile img {
+    float: left;
+    margin: 12px;
+    width: 80px;
+    height: 80px;
+}
+
+.ps-user-profile-small {
+    color: #333;
+    padding-top: 4px;
+}
+
+.ps-user-profile-small > span {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ps-user-profile-small img {
+    width: 40px;
+    height: 40px;
+}
+
+

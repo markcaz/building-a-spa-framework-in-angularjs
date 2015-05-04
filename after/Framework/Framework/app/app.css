@@ -1,0 +1,13 @@
+﻿
+body {
+    background-color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.sign-in-form {
+    padding: 80px;
+}
